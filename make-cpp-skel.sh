@@ -8,7 +8,10 @@ echo "#include <bits/stdc++.h>" >> $file_name
 echo "" >> $file_name
 
 echo "using namespace std;" >> $file_name
+
+echo "" >> $file_name
 echo "typedef long long ll;" >> $file_name
+
 
 echo "" >> $file_name
 
