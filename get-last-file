@@ -1,0 +1,19 @@
+#!/bin/bash
+
+current_directory=`ls`
+latest_file=""
+
+for file in $current_directory
+do
+  if [ "$latest_file" == "" ]
+  then
+    latest_file=$file
+  else
+    if [ "$latest_file" -ot "$file" -a ! -d "$file" ]
+    then
+      latest_file=$file
+    fi
+  fi
+done
+
+echo $latest_file
