@@ -2,7 +2,7 @@
 
 scripts=`ls`
 
-for script in scripts
+for script in $scripts
 do
 	filename=$(basename -- "$script")
 	filename="${filename%.*}"
