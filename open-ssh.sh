@@ -6,7 +6,7 @@ cat tmp.pub >> ~/.ssh/authorized_keys
 
 sudo ufw allow ssh
 
-ed /etc/ssh_config <<!
+ed /etc/ssh/ssh_config <<!
 /PasswordAuthentication yes/
 d
 a
@@ -15,7 +15,7 @@ PasswordAuthentication yes
 w
 !
 
-ed /etc/sshd_config <<!
+ed /etc/ssh/sshd_config <<!
 /PasswordAuthentication yes/
 d
 a
