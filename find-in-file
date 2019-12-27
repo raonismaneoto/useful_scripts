@@ -1,0 +1,8 @@
+#!/bin/bash
+FROM=$2
+PATTERN=$1
+if [[  "$FROM" == "" ]]; then
+	grep -rnw "." -e "$PATTERN"
+else
+	grep -rnw "$FROM" -e "$PATTERN"
+fi
