@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash generate_ssh_key_pair.sh tmp
+bash generate_ssh_key_pair tmp
 
 cat tmp.pub >> ~/.ssh/authorized_keys
 
@@ -14,4 +14,14 @@ PasswordAuthentication yes
 .
 w
 !
+
+ed /etc/sshd_config <<!
+/PasswordAuthentication yes/
+d
+a
+PasswordAuthentication yes
+.
+w
+!
+
 exit 0
