@@ -12,10 +12,7 @@ exec_for_one_dir () {
             continue
         fi
 
-        amount=`grep -c $print_function $file`
-        for ((i=1;i<=$amount;i++)); do
-            sed "/$print_function/d" $file
-        done
+        sed "/$print_function/d" $file
     done
 }
 
@@ -26,11 +23,8 @@ if [ -z $recursive ]; then
         if [ -d $file ]; then
             continue
         fi
-
-        amount=`grep -c $print_function $file`
-        for ((i=1;i<=$amount;i++)); do
-            sed "/$print_function/d" $file
-        done
+        
+        sed "/$print_function/d" $file
     done
 else
     files=`ls $root_dir`
