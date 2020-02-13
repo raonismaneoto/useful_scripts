@@ -12,7 +12,7 @@ exec_for_one_dir () {
             continue
         fi
 
-        sed "/$print_function/d" $file
+        sed -i "/$print_function/d" $file
     done
 }
 
@@ -24,7 +24,7 @@ if [ -z $recursive ]; then
             continue
         fi
         
-        sed "/$print_function/d" $file
+        sed -i "/$print_function/d" $file
     done
 else
     files=`ls $root_dir`
