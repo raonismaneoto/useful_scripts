@@ -14,7 +14,7 @@ exec_for_one_dir () {
 
         amount=`grep -c $print_function $file`
         for ((i=1;i<=$amount;i++)); do
-            sed '/$print_function/d' $file
+            sed "/$print_function/d" $file
         done
     done
 }
@@ -29,7 +29,7 @@ if [ -z $recursive ]; then
 
         amount=`grep -c $print_function $file`
         for ((i=1;i<=$amount;i++)); do
-            sed '/$print_function/d' $file
+            sed "/$print_function/d" $file
         done
     done
 else
